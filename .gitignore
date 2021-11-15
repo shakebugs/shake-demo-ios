@@ -7,6 +7,9 @@
 node_modules/
 dist/
 
+# iOS artifact files
+Pods/
+
 # Compiled Java class files
 *.class
 

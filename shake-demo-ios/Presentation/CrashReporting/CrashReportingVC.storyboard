@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roobert-Medium.otf">
+            <string>Roobert-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Crash ReportingVC-->
+        <scene sceneID="pL3-oE-59a">
+            <objects>
+                <viewController storyboardIdentifier="CrashReportingVC" id="s6L-3M-4FF" customClass="CrashReportingVC" customModule="shake_demo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="79C-oE-rWb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znJ-Nx-Z2A">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-jc-Kxi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="698"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crash reporting 💥" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPo-Nc-CXe">
+                                                <rect key="frame" x="20" y="30" width="374" height="42"/>
+                                                <fontDescription key="fontDescription" name="Roobert-Bold" family="Roobert" pointSize="36"/>
+                                                <color key="textColor" name="shake_headline_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR8-SC-rQl">
+                                                <rect key="frame" x="20" y="105" width="374" height="105"/>
+                                                <string key="text">Shake SDK can also be on the lookout for fatal errors and ask your users to describe what happened. Just as with Tickets, Crash reports will be packed with data about the device, usage and user.</string>
+                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
+                                                <color key="textColor" name="shake_subtitle_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now try this✨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQS-wJ-mv2">
+                                                <rect key="frame" x="20" y="270" width="374" height="26"/>
+                                                <fontDescription key="fontDescription" name="Roobert-Bold" family="Roobert" pointSize="22"/>
+                                                <color key="textColor" name="shake_headline_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-s6-uja" userLabel="StepsView">
+                                                <rect key="frame" x="20" y="314" width="374" height="200"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME1-DH-gBi" userLabel="View1">
+                                                        <rect key="frame" x="18" y="24" width="338" height="21"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skG-Fu-FOr" customClass="CircleView" customModule="shake_demo_ios" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="-12" width="45" height="45"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="customizing-one" translatesAutoresizingMaskIntoConstraints="NO" id="FXs-k3-3cI">
+                                                                        <rect key="frame" x="9" y="9" width="27" height="27"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.84313725490196079" green="0.36862745098039218" blue="0.84313725490196079" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="Ppw-WW-7bW"/>
+                                                                    <constraint firstItem="FXs-k3-3cI" firstAttribute="centerY" secondItem="skG-Fu-FOr" secondAttribute="centerY" id="amM-42-9lM"/>
+                                                                    <constraint firstItem="FXs-k3-3cI" firstAttribute="centerX" secondItem="skG-Fu-FOr" secondAttribute="centerX" id="byM-Yq-9l8"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="e8P-0M-JCP"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap me to crash this app for fun" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1la-lk-RH4">
+                                                                <rect key="frame" x="63" y="0.0" width="257" height="21"/>
+                                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
+                                                                <color key="textColor" name="shake_steps_color"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="skG-Fu-FOr" firstAttribute="leading" secondItem="ME1-DH-gBi" secondAttribute="leading" id="0F3-N6-0RB"/>
+                                                            <constraint firstAttribute="trailing" secondItem="1la-lk-RH4" secondAttribute="trailing" constant="18" id="8Tt-SA-mw1"/>
+                                                            <constraint firstItem="1la-lk-RH4" firstAttribute="top" secondItem="ME1-DH-gBi" secondAttribute="top" id="BhR-XU-r6c"/>
+                                                            <constraint firstAttribute="bottom" secondItem="1la-lk-RH4" secondAttribute="bottom" id="Gbz-kv-z3l"/>
+                                                            <constraint firstItem="1la-lk-RH4" firstAttribute="leading" secondItem="skG-Fu-FOr" secondAttribute="trailing" constant="18" id="M5a-Ec-JwH"/>
+                                                            <constraint firstItem="skG-Fu-FOr" firstAttribute="centerY" secondItem="ME1-DH-gBi" secondAttribute="centerY" id="Xo8-VH-TgV"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-O1-DPH" userLabel="View2">
+                                                        <rect key="frame" x="18" y="77" width="338" height="105"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71O-bW-yPL" customClass="CircleView" customModule="shake_demo_ios" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="30" width="45" height="45"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="customizing-two" translatesAutoresizingMaskIntoConstraints="NO" id="jfl-UH-fiN">
+                                                                        <rect key="frame" x="9" y="9" width="27" height="27"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.84313725490196079" green="0.36862745098039218" blue="0.84313725490196079" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="Gs9-J0-XKp"/>
+                                                                    <constraint firstItem="jfl-UH-fiN" firstAttribute="centerX" secondItem="71O-bW-yPL" secondAttribute="centerX" id="UJg-WD-xsl"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="s6g-cc-TIU"/>
+                                                                    <constraint firstItem="jfl-UH-fiN" firstAttribute="centerY" secondItem="71O-bW-yPL" secondAttribute="centerY" id="yc0-20-WQe"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Eh-6N-piy">
+                                                                <rect key="frame" x="63" y="0.0" width="257" height="105"/>
+                                                                <string key="text">On your computer visit www.shk.sh/demo to see how your crash report looks like. Shake SDK has attached all that data   automatically!</string>
+                                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
+                                                                <color key="textColor" name="shake_steps_color"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="0Eh-6N-piy" firstAttribute="top" secondItem="uPJ-O1-DPH" secondAttribute="top" id="1A1-ao-519"/>
+                                                            <constraint firstItem="71O-bW-yPL" firstAttribute="centerY" secondItem="uPJ-O1-DPH" secondAttribute="centerY" id="DPu-7v-0c8"/>
+                                                            <constraint firstAttribute="trailing" secondItem="0Eh-6N-piy" secondAttribute="trailing" constant="18" id="PGU-Jq-hyv"/>
+                                                            <constraint firstItem="0Eh-6N-piy" firstAttribute="leading" secondItem="71O-bW-yPL" secondAttribute="trailing" constant="18" id="aBz-8z-sBQ"/>
+                                                            <constraint firstItem="71O-bW-yPL" firstAttribute="leading" secondItem="uPJ-O1-DPH" secondAttribute="leading" id="cGm-eF-GYc"/>
+                                                            <constraint firstAttribute="bottom" secondItem="0Eh-6N-piy" secondAttribute="bottom" id="uvM-s2-bhm"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" name="shake_steps_parent_view"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="uPJ-O1-DPH" secondAttribute="bottom" constant="18" id="LZk-7S-dOO"/>
+                                                    <constraint firstItem="uPJ-O1-DPH" firstAttribute="top" secondItem="ME1-DH-gBi" secondAttribute="bottom" constant="32" id="NYx-hh-akg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ME1-DH-gBi" secondAttribute="trailing" constant="18" id="PJM-LZ-mtH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="uPJ-O1-DPH" secondAttribute="trailing" constant="18" id="V5C-Go-wiN"/>
+                                                    <constraint firstItem="ME1-DH-gBi" firstAttribute="leading" secondItem="fgJ-s6-uja" secondAttribute="leading" constant="18" id="dat-SA-wet"/>
+                                                    <constraint firstItem="uPJ-O1-DPH" firstAttribute="leading" secondItem="fgJ-s6-uja" secondAttribute="leading" constant="18" id="ftF-bO-HNt"/>
+                                                    <constraint firstItem="ME1-DH-gBi" firstAttribute="top" secondItem="fgJ-s6-uja" secondAttribute="top" constant="24" id="kQk-ve-v8j"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc3-ZD-pzH">
+                                                <rect key="frame" x="20" y="574" width="374" height="84"/>
+                                                <string key="text">On the web Dashboard, navigate to the Crashes product in the left navigation bar and find your crash. It will be mixed with others' crashes.</string>
+                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
+                                                <color key="textColor" name="shake_subtitle_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Zc3-ZD-pzH" secondAttribute="trailing" constant="20" id="0M4-Pd-aF8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zc3-ZD-pzH" secondAttribute="trailing" constant="20" id="3LB-wR-TjN"/>
+                                            <constraint firstItem="CPo-Nc-CXe" firstAttribute="top" secondItem="b8w-jc-Kxi" secondAttribute="top" constant="30" id="3XG-5R-Vg1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zc3-ZD-pzH" secondAttribute="trailing" constant="20" id="5Lx-Gm-2KB"/>
+                                            <constraint firstItem="Zc3-ZD-pzH" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="938-Xx-0Ph"/>
+                                            <constraint firstItem="HQS-wJ-mv2" firstAttribute="top" secondItem="gR8-SC-rQl" secondAttribute="bottom" constant="60" id="Dbp-St-HeA"/>
+                                            <constraint firstItem="Zc3-ZD-pzH" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="EO0-d2-NQD"/>
+                                            <constraint firstItem="fgJ-s6-uja" firstAttribute="top" secondItem="HQS-wJ-mv2" secondAttribute="bottom" constant="18" id="EuB-SP-baE"/>
+                                            <constraint firstAttribute="trailing" secondItem="gR8-SC-rQl" secondAttribute="trailing" constant="20" id="FBG-Tq-5zq"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zc3-ZD-pzH" secondAttribute="bottom" constant="40" id="GlY-rU-WpW"/>
+                                            <constraint firstItem="Zc3-ZD-pzH" firstAttribute="top" secondItem="fgJ-s6-uja" secondAttribute="bottom" constant="60" id="JBL-Af-9XU"/>
+                                            <constraint firstItem="Zc3-ZD-pzH" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="N9A-UB-s00"/>
+                                            <constraint firstItem="gR8-SC-rQl" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="V41-z8-JDY"/>
+                                            <constraint firstItem="fgJ-s6-uja" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="a6f-Ot-ocS"/>
+                                            <constraint firstAttribute="trailing" secondItem="HQS-wJ-mv2" secondAttribute="trailing" constant="20" id="dE4-1N-6LQ"/>
+                                            <constraint firstItem="CPo-Nc-CXe" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="daZ-Rd-mA3"/>
+                                            <constraint firstAttribute="trailing" secondItem="fgJ-s6-uja" secondAttribute="trailing" constant="20" id="pwx-b2-Xpq"/>
+                                            <constraint firstItem="gR8-SC-rQl" firstAttribute="top" secondItem="CPo-Nc-CXe" secondAttribute="bottom" constant="33" id="u0g-dn-kBp"/>
+                                            <constraint firstItem="HQS-wJ-mv2" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="uzK-xn-aiG"/>
+                                            <constraint firstAttribute="trailing" secondItem="CPo-Nc-CXe" secondAttribute="trailing" constant="20" id="yqK-g0-bOH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="b8w-jc-Kxi" secondAttribute="trailing" id="JXW-pj-VrU"/>
+                                    <constraint firstAttribute="bottom" secondItem="b8w-jc-Kxi" secondAttribute="bottom" id="lGI-7S-48o"/>
+                                    <constraint firstItem="b8w-jc-Kxi" firstAttribute="leading" secondItem="znJ-Nx-Z2A" secondAttribute="leading" id="qo3-Kx-MHB"/>
+                                    <constraint firstItem="b8w-jc-Kxi" firstAttribute="top" secondItem="znJ-Nx-Z2A" secondAttribute="top" id="xyq-lX-KPh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="myB-ef-Wcy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="znJ-Nx-Z2A" firstAttribute="bottom" secondItem="myB-ef-Wcy" secondAttribute="bottom" id="7Jb-BG-VGl"/>
+                            <constraint firstItem="znJ-Nx-Z2A" firstAttribute="trailing" secondItem="myB-ef-Wcy" secondAttribute="trailing" id="88z-XQ-gYB"/>
+                            <constraint firstItem="znJ-Nx-Z2A" firstAttribute="leading" secondItem="myB-ef-Wcy" secondAttribute="leading" id="IYq-MJ-VgD"/>
+                            <constraint firstItem="znJ-Nx-Z2A" firstAttribute="top" secondItem="myB-ef-Wcy" secondAttribute="top" id="LIE-rj-hfL"/>
+                            <constraint firstItem="b8w-jc-Kxi" firstAttribute="width" secondItem="myB-ef-Wcy" secondAttribute="width" id="Sct-jn-4Dx"/>
+                            <constraint firstItem="b8w-jc-Kxi" firstAttribute="height" secondItem="myB-ef-Wcy" secondAttribute="height" priority="250" id="Y5c-3i-MsR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tutorialStepCrash" destination="ME1-DH-gBi" id="Zua-ZB-BTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBY-MM-Gkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-333.33333333333337" y="49.553571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="customizing-one" width="27" height="27"/>
+        <image name="customizing-two" width="27" height="27"/>
+        <namedColor name="shake_headline_color">
+            <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="shake_steps_color">
+            <color red="0.44280344785625619" green="0.44596069656810028" blue="0.45543244270363237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="shake_steps_parent_view">
+            <color red="0.95700103039999995" green="0.95650047059999999" blue="0.97255247830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="shake_subtitle_color">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
