@@ -52,7 +52,7 @@ This app is intended as a playground for what Shake can do, without having to ad
 ## How to run 
 
 1. Clone the GitHub repository and open the project. 
-2. Run ```pod install``` to install the Shake pod.
+2. Run ```pod install``` to install the necessary dependencies.
 3. Build the app & enjoy. 
 
 ## Authors
