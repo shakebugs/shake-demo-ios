@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -29,7 +29,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7X-wv-Flp">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="905.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Shake demo app" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gs-s8-We3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Ticket App" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gs-s8-We3">
                                                 <rect key="frame" x="20" y="30" width="374" height="84"/>
                                                 <fontDescription key="fontDescription" name="Roobert-Bold" family="Roobert" pointSize="36"/>
                                                 <color key="textColor" name="shake_headline_color"/>
@@ -40,9 +40,9 @@
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" link="YES"/>
                                                 </accessibility>
-                                                <string key="text">To learn about Shake, visit www.shakebugs.com
+                                                <string key="text">To learn about Shake SDK, visit www.shakebugs.com
 
-This Demo app is a playground where you can try what Shake SDK can do, without having to add it to your app.</string>
+This application is a playground where you can try what Shake SDK can do, without having to add it to your app.</string>
                                                 <color key="textColor" name="shake_subtitle_color"/>
                                                 <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="url"/>
@@ -113,9 +113,9 @@ This Demo app is a playground where you can try what Shake SDK can do, without h
                                                                 </constraints>
                                                             </view>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbR-2r-hZq" userLabel="textView">
-                                                                <rect key="frame" x="65" y="0.0" width="253" height="123.5"/>
+                                                                <rect key="frame" x="63" y="0.0" width="257" height="123.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <string key="text">On your computer visit www.shk.sh/demo to see how your submitted ticket looks like. Shake SDK has attached all that data automatically !</string>
+                                                                <string key="text">On your computer visit www.shk.sh/demo to see how your submitted ticket looks like. Shake SDK has attached all that data automatically!</string>
                                                                 <color key="textColor" name="shake_steps_color"/>
                                                                 <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -123,11 +123,11 @@ This Demo app is a playground where you can try what Shake SDK can do, without h
                                                             </textView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="gbR-2r-hZq" secondAttribute="trailing" constant="20" id="Pa8-c1-XvG"/>
+                                                            <constraint firstAttribute="trailing" secondItem="gbR-2r-hZq" secondAttribute="trailing" constant="18" id="Pa8-c1-XvG"/>
                                                             <constraint firstItem="vWd-Eo-wUF" firstAttribute="centerY" secondItem="wj6-t5-IGl" secondAttribute="centerY" id="Qrr-w0-GAI"/>
                                                             <constraint firstItem="gbR-2r-hZq" firstAttribute="top" secondItem="wj6-t5-IGl" secondAttribute="top" id="Zfe-xf-FVi"/>
                                                             <constraint firstAttribute="bottom" secondItem="gbR-2r-hZq" secondAttribute="bottom" id="jg8-5h-GZb"/>
-                                                            <constraint firstItem="gbR-2r-hZq" firstAttribute="leading" secondItem="vWd-Eo-wUF" secondAttribute="trailing" constant="20" id="jlQ-I4-0qv"/>
+                                                            <constraint firstItem="gbR-2r-hZq" firstAttribute="leading" secondItem="vWd-Eo-wUF" secondAttribute="trailing" constant="18" id="jlQ-I4-0qv"/>
                                                             <constraint firstItem="vWd-Eo-wUF" firstAttribute="leading" secondItem="wj6-t5-IGl" secondAttribute="leading" id="q2s-R6-TJs"/>
                                                         </constraints>
                                                     </view>
@@ -219,10 +219,10 @@ For more ideas, visit the  navbar ☰ in the top left corner.</string>
             <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="shake_steps_color">
-            <color red="0.44280344785625619" green="0.44596069656810028" blue="0.45543244270363237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.44299998879432678" green="0.44600000977516174" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="shake_steps_parent_view">
-            <color red="0.95700103039999995" green="0.95650047059999999" blue="0.97255247830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="shake_subtitle_color">
             <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

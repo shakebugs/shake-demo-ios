@@ -13,38 +13,99 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let defaults = UserDefaults.standard
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let defaults = UserDefaults.standard
         
-        if defaults.bool(forKey: "firstLaunch") == true{
-            
-        } else{
-            Shake.configuration.isCrashReportingEnabled = true
-            Shake.configuration.isAskForCrashDescriptionEnabled = true
-            Shake.configuration.isConsoleLogsEnabled = false
-            Shake.configuration.isBlackBoxEnabled = true
-            Shake.configuration.isAutoVideoRecordingEnabled = false
-            Shake.configuration.setShowIntroMessage = true
-            
-            Shake.configuration.isFloatingReportButtonShown = false
-            Shake.configuration.isInvokedByShakeDeviceEvent = true
-            Shake.configuration.isInvokedByScreenshot = false
-            
-            Shake.configuration.isFeedbackTypeEnabled = true
-            Shake.configuration.isEmailFieldEnabled = true
-            Shake.configuration.isInspectScreenEnabled = true
-            
-            Shake.configuration.isScreenshotIncluded = true
+        // Shaking invocation
+        if defaults.object(forKey: "isInvokedByShakeDeviceEvent") == nil{
+            defaults.set(true, forKey: "isInvokedByShakeDeviceEvent")
         }
+        Shake.configuration.isInvokedByShakeDeviceEvent = defaults.bool(forKey: "isInvokedByShakeDeviceEvent")
+                
+        // Floating button invocation
+        if defaults.object(forKey: "isFloatingReportButtonShown") == nil{
+            defaults.set(false, forKey: "isFloatingReportButtonShown")
+        }
+        Shake.configuration.isFloatingReportButtonShown = defaults.bool(forKey: "isFloatingReportButtonShown")
         
-
-         
         
-        Shake.start(clientId: "3z2HNzwBlifX9o5oayO2eRbD1qtytYNW4JlzF7bc", clientSecret: "CLVD8gq0GPmJbLTYwublgig2tZuk1QAvRrCiUekG3Jy0K249l1xAqob")
+        // Screenshot invocation method
+        if defaults.object(forKey: "isInvokedByScreenshot") == nil{
+            defaults.set(false, forKey: "isInvokedByScreenshot")
+        }
+        Shake.configuration.isInvokedByScreenshot = defaults.bool(forKey: "isInvokedByScreenshot")
+        
+        
+        // Console logs enabled/disabled
+        if defaults.object(forKey: "isConsoleLogsEnabled") == nil{
+            defaults.set(false, forKey: "isConsoleLogsEnabled")
+        }
+        Shake.configuration.isConsoleLogsEnabled = defaults.bool(forKey: "isConsoleLogsEnabled")
+        
+        // Blackbox enabled/disabled
+        if defaults.object(forKey: "isBlackBoxEnabled") == nil{
+            defaults.set(false, forKey: "isBlackBoxEnabled")
+        }
+        Shake.configuration.isBlackBoxEnabled = defaults.bool(forKey: "isBlackBoxEnabled")
+        
+        
+        // Included screenshot enabled/disabled
+        if defaults.object(forKey: "isScreenshotIncluded") == nil{
+            defaults.set(false, forKey: "isScreenshotIncluded")
+        }
+        Shake.configuration.isScreenshotIncluded = defaults.bool(forKey: "isScreenshotIncluded")
+        
+        
+        // Email field enabled/disabled
+        if defaults.object(forKey: "isEmailFieldEnabled") == nil{
+            defaults.set(false, forKey: "isEmailFieldEnabled")
+        }
+        Shake.configuration.isEmailFieldEnabled = defaults.bool(forKey: "isEmailFieldEnabled")
+        
+        // Inspect screen enabled/disabled
+        if defaults.object(forKey: "isInspectScreenEnabled") == nil{
+            defaults.set(false, forKey: "isInspectScreenEnabled")
+        }
+        Shake.configuration.isInspectScreenEnabled = defaults.bool(forKey: "isInspectScreenEnabled")
+        
+        
+        // Feedback type enabled/disabled
+        if defaults.object(forKey: "isFeedbackTypeEnabled") == nil{
+            defaults.set(false, forKey: "isFeedbackTypeEnabled")
+        }
+        Shake.configuration.isFeedbackTypeEnabled = defaults.bool(forKey: "isFeedbackTypeEnabled")
+        
+        // Feedback type enabled/disabled
+        if defaults.object(forKey: "shakingThreshold") == nil{
+            defaults.set(600, forKey: "shakingThreshold")
+        }
+        Shake.configuration.shakingThreshold = defaults.float(forKey: "shakingThreshold")
+   
+        Shake.configuration.isCrashReportingEnabled = true
+        Shake.configuration.isAskForCrashDescriptionEnabled = true
+        Shake.configuration.setShowIntroMessage = true
+        Shake.configuration.isInvokedByRightEdgePan = false
+        Shake.configuration.isAutoVideoRecordingEnabled = false
+        
+        Shake.start(clientId: "lEtd511X2gn3qsgR1RWPVEL15RpKbdY0r6x99LFP", clientSecret: "nErTSH6tgNB1dMDAQKQaMNA1d8yD8tEDl82XPrYQEucvG9vFy89JqWZ")
         
         Shake.registerUser(userId: UIDevice.current.identifierForVendor!.uuidString)
+        
+        var userMetadata = [String: String]()
+        
+        userMetadata = [
+            "first_name": "John",
+            "last_name": "Doe",
+            "email": "john.doe@email.com",
+            "status": "Active",
+            "cartItems": "3",
+            "cartTotal": "$25.33"
+        ]
+        
+        Shake.updateUserMetadata(userMetadata)
         
         return true
     }

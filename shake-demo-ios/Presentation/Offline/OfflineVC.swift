@@ -1,39 +1,31 @@
 //
-//  CrashReportingVC.swift
+//  OfflineVC.swift
 //  shake-demo-ios
 //
-//  Created by Sanjin Grahovar Sadiković on 02.11.2021..
+//  Created by Sanjin Grahovar Sadiković on 30.12.2021..
 //
 
 import Foundation
 import UIKit
 import Shake
 
-class CrashReportingVC: UIViewController, UIGestureRecognizerDelegate, UITextViewDelegate{
+class OfflineVC: UIViewController, UIGestureRecognizerDelegate, UITextViewDelegate{
+    @IBOutlet weak var linkTextView: UITextView!
     
-    @IBOutlet weak var tutorialStepCrash: UIView!
-    @IBOutlet weak var stepsTextView: UITextView!
+//    @IBOutlet weak var linkTextView: UITextView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleCrash(sender:)))
-        tutorialStepCrash.addGestureRecognizer(tapGesture)
-        tutorialStepCrash.isUserInteractionEnabled = true
         
+        linkTextView.delegate = self
+                
         var attributes = [NSAttributedString.Key: Any]()
         attributes[.foregroundColor] = UIColor(named: "shake_url_color")
         attributes[.underlineColor] = UIColor(named: "shake_url_color")
         attributes[.underlineStyle] = NSUnderlineStyle.single.rawValue
         attributes[.strokeWidth] = -2
         
-        // textView.linkTextAttributes = attributes
-        stepsTextView.linkTextAttributes = attributes
-    }
-    
-    @objc func handleCrash(sender: UITapGestureRecognizer) {
-        fatalError()
+        linkTextView.linkTextAttributes = attributes
     }
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {

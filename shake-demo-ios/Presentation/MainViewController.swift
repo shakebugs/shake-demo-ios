@@ -14,17 +14,20 @@ enum NavigationOption: Int {
     case customizing
     case crashReporting
     case feedbackCenter
+    case offlineSupport
     
     var description: (String, String) {
         switch self {
-        case .shaking:
-            return ("Hi, try shaking", "shaking_icon")
-        case .customizing:
-            return ("Customizing Shake", "customizing_icon")
-        case .crashReporting:
-            return ("Crash reporting", "crashReporting_icon")
-        case .feedbackCenter:
-            return ("Feedback center", "feedbackCenter_icon")
+            case .shaking:
+                return ("Hi, try shaking", "shaking_icon")
+            case .customizing:
+                return ("Customizing Shake", "customizing_icon")
+            case .crashReporting:
+                return ("Crash reporting", "crashReporting_icon")
+            case .feedbackCenter:
+                return ("Feedback center", "feedbackCenter_icon")
+            case .offlineSupport:
+                return ("Offline support", "offline_icon")
         }
     }
 }
@@ -49,7 +52,7 @@ class MainViewController: UIViewController, MenuControllerDelegate {
 
         self.navigationController?.navigationItem.hidesBackButton = true
         
-        let menuController = MenuListController(navigationOptions: [.shaking, .customizing, .crashReporting, .feedbackCenter])
+        let menuController = MenuListController(navigationOptions: [.shaking, .customizing, .crashReporting, .feedbackCenter, .offlineSupport])
         menuController.delegate = self
         
         menu = SideMenuNavigationController(rootViewController: menuController)
@@ -64,24 +67,27 @@ class MainViewController: UIViewController, MenuControllerDelegate {
     }
     
     @objc func rightMenuTapped(sender: UIBarButtonItem) {
+        
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        alert.popoverPresentationController?.barButtonItem = sender
+        
+        alert.addAction(UIAlertAction(title: "Settings", style: .default , handler:{ (UIAlertAction)in
             
-            alert.addAction(UIAlertAction(title: "Settings", style: .default , handler:{ (UIAlertAction)in
-                
-                let storyboard = UIStoryboard(name: "SettingsVC", bundle: .main)
-                
-                if #available(iOS 13.0, *) {
-                    let settingsVC = storyboard.instantiateViewController(identifier: "SettingsVC")
-                    self.navigationController?.pushViewController(settingsVC, animated: true)
-                } else{
-                    let settingsVC = storyboard.instantiateViewController(withIdentifier: "SettingsVC")
-                    self.navigationController?.pushViewController(settingsVC, animated: true)
-                }
-            }))
+            let storyboard = UIStoryboard(name: "SettingsVC", bundle: .main)
             
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
-                print("User click Dismiss button")
-            }))
+            if #available(iOS 13.0, *) {
+                let settingsVC = storyboard.instantiateViewController(identifier: "SettingsVC")
+                self.navigationController?.pushViewController(settingsVC, animated: true)
+            } else{
+                let settingsVC = storyboard.instantiateViewController(withIdentifier: "SettingsVC")
+                self.navigationController?.pushViewController(settingsVC, animated: true)
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
+            print("User click Dismiss button")
+        }))
         
         self.present(alert, animated: true, completion: {
             print("completion block")
@@ -124,6 +130,14 @@ class MainViewController: UIViewController, MenuControllerDelegate {
                 configuredViewController = storyboard.instantiateViewController(identifier: "FeedbackVC")
             } else{
                 configuredViewController = storyboard.instantiateViewController(withIdentifier: "FeedbackVC")
+            }
+            
+        case .offlineSupport:
+            let storyboard = UIStoryboard(name: "OfflineVC", bundle: .main)
+            if #available(iOS 13.0, *) {
+                configuredViewController = storyboard.instantiateViewController(identifier: "OfflineVC")
+            } else{
+                configuredViewController = storyboard.instantiateViewController(withIdentifier: "OfflineVC")
             }
 
         default:

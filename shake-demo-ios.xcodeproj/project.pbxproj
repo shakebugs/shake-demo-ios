@@ -3,14 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		29020897273554CA0002A80E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29020896273554CA0002A80E /* MainViewController.swift */; };
 		290208A4273564F30002A80E /* BottomBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290208A3273564F30002A80E /* BottomBorderView.swift */; };
-		29A19EA1273EF5800000794E /* Shake.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A19E9F273EF5730000794E /* Shake.xcframework */; };
-		29A19EA2273EF5800000794E /* Shake.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 29A19E9F273EF5730000794E /* Shake.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		29A9B49C2735440B006AF65F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A9B49B2735440B006AF65F /* AppDelegate.swift */; };
 		29A9B49E2735440B006AF65F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A9B49D2735440B006AF65F /* SceneDelegate.swift */; };
 		29A9B4A02735440B006AF65F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A9B49F2735440B006AF65F /* ViewController.swift */; };
@@ -28,6 +26,8 @@
 		29A9B4EB2735464D006AF65F /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A9B4E92735464D006AF65F /* SettingsVC.swift */; };
 		29A9B4EF27354658006AF65F /* ShakingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A9B4ED27354658006AF65F /* ShakingVC.swift */; };
 		29A9B4F027354658006AF65F /* ShakingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A9B4EE27354658006AF65F /* ShakingVC.storyboard */; };
+		29AB1EE3277DF1BB00CC27B3 /* OfflineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB1EE2277DF1BB00CC27B3 /* OfflineVC.swift */; };
+		29AB1EE5277DF1CE00CC27B3 /* OfflineVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29AB1EE4277DF1CE00CC27B3 /* OfflineVC.storyboard */; };
 		CCE0F46CD72C3A48DFADE57B /* Pods_shake_demo_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FA0A17EE7AB1925E432E22 /* Pods_shake_demo_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				29A19EA2273EF5800000794E /* Shake.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,7 +48,6 @@
 		09FA0A17EE7AB1925E432E22 /* Pods_shake_demo_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shake_demo_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29020896273554CA0002A80E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		290208A3273564F30002A80E /* BottomBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderView.swift; sourceTree = "<group>"; };
-		29A19E9F273EF5730000794E /* Shake.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Shake.xcframework; sourceTree = "<group>"; };
 		29A9B4982735440B006AF65F /* shake-demo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shake-demo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A9B49B2735440B006AF65F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A9B49D2735440B006AF65F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +67,8 @@
 		29A9B4E92735464D006AF65F /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		29A9B4ED27354658006AF65F /* ShakingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakingVC.swift; sourceTree = "<group>"; };
 		29A9B4EE27354658006AF65F /* ShakingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShakingVC.storyboard; sourceTree = "<group>"; };
+		29AB1EE2277DF1BB00CC27B3 /* OfflineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineVC.swift; sourceTree = "<group>"; };
+		29AB1EE4277DF1CE00CC27B3 /* OfflineVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfflineVC.storyboard; sourceTree = "<group>"; };
 		40A084753790884EF3919B15 /* Pods-shake-demo-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shake-demo-ios.release.xcconfig"; path = "Target Support Files/Pods-shake-demo-ios/Pods-shake-demo-ios.release.xcconfig"; sourceTree = "<group>"; };
 		4518E2B635E3B39831148B1E /* Pods-shake-demo-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shake-demo-ios.debug.xcconfig"; path = "Target Support Files/Pods-shake-demo-ios/Pods-shake-demo-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29A19EA1273EF5800000794E /* Shake.xcframework in Frameworks */,
 				CCE0F46CD72C3A48DFADE57B /* Pods_shake_demo_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +106,6 @@
 		29A9B49A2735440B006AF65F /* shake-demo-ios */ = {
 			isa = PBXGroup;
 			children = (
-				29A19E9F273EF5730000794E /* Shake.xcframework */,
 				29A9B4B927354501006AF65F /* Presentation */,
 				29A9B49B2735440B006AF65F /* AppDelegate.swift */,
 				29A9B49D2735440B006AF65F /* SceneDelegate.swift */,
@@ -122,6 +120,7 @@
 		29A9B4B927354501006AF65F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				29AB1EE1277DF17400CC27B3 /* Offline */,
 				29A9B4A12735440B006AF65F /* Main.storyboard */,
 				29A9B4D427354611006AF65F /* CircleView.swift */,
 				29A9B4D3273545EE006AF65F /* Shaking */,
@@ -178,6 +177,15 @@
 				29A9B4ED27354658006AF65F /* ShakingVC.swift */,
 			);
 			path = Shaking;
+			sourceTree = "<group>";
+		};
+		29AB1EE1277DF17400CC27B3 /* Offline */ = {
+			isa = PBXGroup;
+			children = (
+				29AB1EE2277DF1BB00CC27B3 /* OfflineVC.swift */,
+				29AB1EE4277DF1CE00CC27B3 /* OfflineVC.storyboard */,
+			);
+			path = Offline;
 			sourceTree = "<group>";
 		};
 		7D691D22BDE0D3160DDEDDC7 /* Pods */ = {
@@ -259,6 +267,7 @@
 			files = (
 				29A9B4E527354643006AF65F /* FeedbackVC.storyboard in Resources */,
 				29A9B4F027354658006AF65F /* ShakingVC.storyboard in Resources */,
+				29AB1EE5277DF1CE00CC27B3 /* OfflineVC.storyboard in Resources */,
 				29A9B4EA2735464D006AF65F /* SettingsVC.storyboard in Resources */,
 				29A9B4A82735440D006AF65F /* LaunchScreen.storyboard in Resources */,
 				29A9B4E027354637006AF65F /* CustomizingVC.storyboard in Resources */,
@@ -327,6 +336,7 @@
 				29A9B4DB2735462B006AF65F /* CrashReportingVC.swift in Sources */,
 				29A9B4EB2735464D006AF65F /* SettingsVC.swift in Sources */,
 				290208A4273564F30002A80E /* BottomBorderView.swift in Sources */,
+				29AB1EE3277DF1BB00CC27B3 /* OfflineVC.swift in Sources */,
 				29020897273554CA0002A80E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,16 +485,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4XU4KL2FFC;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 7;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Y8Z27FN9Z7;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "shake-demo-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sanjin.shake-demo-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "agency.decode.ios-demo-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ios-demo-app-provisioning-profile-dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -496,16 +511,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4XU4KL2FFC;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: DECODE HQ Ltd. (Y8Z27FN9Z7)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = Y8Z27FN9Z7;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "shake-demo-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sanjin.shake-demo-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "agency.decode.ios-demo-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "ios-demo-app-provisioning-profile-distribution";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

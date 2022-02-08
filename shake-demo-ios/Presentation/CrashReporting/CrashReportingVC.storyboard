@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-jc-Kxi">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="698"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crash reporting 💥" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPo-Nc-CXe">
                                                 <rect key="frame" x="20" y="30" width="374" height="42"/>
@@ -49,13 +49,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-s6-uja" userLabel="StepsView">
-                                                <rect key="frame" x="20" y="314" width="374" height="200"/>
+                                                <rect key="frame" x="20" y="314" width="374" height="229.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME1-DH-gBi" userLabel="View1">
-                                                        <rect key="frame" x="18" y="24" width="338" height="21"/>
+                                                        <rect key="frame" x="18" y="24" width="338" height="42"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skG-Fu-FOr" customClass="CircleView" customModule="shake_demo_ios" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="-12" width="45" height="45"/>
+                                                                <rect key="frame" x="0.0" y="-1.5" width="45" height="45"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="customizing-one" translatesAutoresizingMaskIntoConstraints="NO" id="FXs-k3-3cI">
                                                                         <rect key="frame" x="9" y="9" width="27" height="27"/>
@@ -69,10 +69,25 @@
                                                                     <constraint firstAttribute="height" constant="45" id="e8P-0M-JCP"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap me to crash this app for fun" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1la-lk-RH4">
-                                                                <rect key="frame" x="63" y="0.0" width="257" height="21"/>
-                                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
-                                                                <color key="textColor" name="shake_steps_color"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1la-lk-RH4">
+                                                                <rect key="frame" x="67" y="0.0" width="253" height="42"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Tap me">
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="shake_steps_color"/>
+                                                                            <font key="NSFont" size="18" name="Roobert-Medium"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <integer key="NSUnderline" value="1"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" to crash this app for fun">
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="shake_steps_color"/>
+                                                                            <font key="NSFont" size="18" name="Roobert-Medium"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -81,15 +96,15 @@
                                                             <constraint firstAttribute="trailing" secondItem="1la-lk-RH4" secondAttribute="trailing" constant="18" id="8Tt-SA-mw1"/>
                                                             <constraint firstItem="1la-lk-RH4" firstAttribute="top" secondItem="ME1-DH-gBi" secondAttribute="top" id="BhR-XU-r6c"/>
                                                             <constraint firstAttribute="bottom" secondItem="1la-lk-RH4" secondAttribute="bottom" id="Gbz-kv-z3l"/>
-                                                            <constraint firstItem="1la-lk-RH4" firstAttribute="leading" secondItem="skG-Fu-FOr" secondAttribute="trailing" constant="18" id="M5a-Ec-JwH"/>
+                                                            <constraint firstItem="1la-lk-RH4" firstAttribute="leading" secondItem="skG-Fu-FOr" secondAttribute="trailing" constant="22" id="M5a-Ec-JwH"/>
                                                             <constraint firstItem="skG-Fu-FOr" firstAttribute="centerY" secondItem="ME1-DH-gBi" secondAttribute="centerY" id="Xo8-VH-TgV"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-O1-DPH" userLabel="View2">
-                                                        <rect key="frame" x="18" y="77" width="338" height="105"/>
+                                                        <rect key="frame" x="18" y="86" width="338" height="123.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71O-bW-yPL" customClass="CircleView" customModule="shake_demo_ios" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="30" width="45" height="45"/>
+                                                                <rect key="frame" x="0.0" y="39.5" width="45" height="45"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="customizing-two" translatesAutoresizingMaskIntoConstraints="NO" id="jfl-UH-fiN">
                                                                         <rect key="frame" x="9" y="9" width="27" height="27"/>
@@ -103,33 +118,42 @@
                                                                     <constraint firstItem="jfl-UH-fiN" firstAttribute="centerY" secondItem="71O-bW-yPL" secondAttribute="centerY" id="yc0-20-WQe"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Eh-6N-piy">
-                                                                <rect key="frame" x="63" y="0.0" width="257" height="105"/>
-                                                                <string key="text">On your computer visit www.shk.sh/demo to see how your crash report looks like. Shake SDK has attached all that data   automatically!</string>
-                                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
-                                                                <color key="textColor" name="shake_steps_color"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="haH-d7-yRF">
+                                                                <rect key="frame" x="63" y="0.0" width="265" height="123.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment>
+                                                                        <string key="content">On your computer visit www.shk.sh/demo to see how your crash report looks like. Shake SDK has attached all that data automatically!</string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="shake_steps_color"/>
+                                                                            <font key="NSFont" size="18" name="Roobert-Medium"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                            </textView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="0Eh-6N-piy" firstAttribute="top" secondItem="uPJ-O1-DPH" secondAttribute="top" id="1A1-ao-519"/>
+                                                            <constraint firstItem="haH-d7-yRF" firstAttribute="leading" secondItem="71O-bW-yPL" secondAttribute="trailing" constant="18" id="AN0-R2-RDJ"/>
                                                             <constraint firstItem="71O-bW-yPL" firstAttribute="centerY" secondItem="uPJ-O1-DPH" secondAttribute="centerY" id="DPu-7v-0c8"/>
-                                                            <constraint firstAttribute="trailing" secondItem="0Eh-6N-piy" secondAttribute="trailing" constant="18" id="PGU-Jq-hyv"/>
-                                                            <constraint firstItem="0Eh-6N-piy" firstAttribute="leading" secondItem="71O-bW-yPL" secondAttribute="trailing" constant="18" id="aBz-8z-sBQ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="haH-d7-yRF" secondAttribute="trailing" constant="10" id="LBw-st-G0S"/>
+                                                            <constraint firstItem="haH-d7-yRF" firstAttribute="top" secondItem="uPJ-O1-DPH" secondAttribute="top" id="bRS-1C-qbQ"/>
                                                             <constraint firstItem="71O-bW-yPL" firstAttribute="leading" secondItem="uPJ-O1-DPH" secondAttribute="leading" id="cGm-eF-GYc"/>
-                                                            <constraint firstAttribute="bottom" secondItem="0Eh-6N-piy" secondAttribute="bottom" id="uvM-s2-bhm"/>
+                                                            <constraint firstAttribute="bottom" secondItem="haH-d7-yRF" secondAttribute="bottom" id="mCt-K8-1wi"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" name="shake_steps_parent_view"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="uPJ-O1-DPH" secondAttribute="bottom" constant="18" id="LZk-7S-dOO"/>
-                                                    <constraint firstItem="uPJ-O1-DPH" firstAttribute="top" secondItem="ME1-DH-gBi" secondAttribute="bottom" constant="32" id="NYx-hh-akg"/>
+                                                    <constraint firstItem="uPJ-O1-DPH" firstAttribute="top" secondItem="ME1-DH-gBi" secondAttribute="bottom" constant="20" id="8pI-nv-KI5"/>
                                                     <constraint firstAttribute="trailing" secondItem="ME1-DH-gBi" secondAttribute="trailing" constant="18" id="PJM-LZ-mtH"/>
                                                     <constraint firstAttribute="trailing" secondItem="uPJ-O1-DPH" secondAttribute="trailing" constant="18" id="V5C-Go-wiN"/>
                                                     <constraint firstItem="ME1-DH-gBi" firstAttribute="leading" secondItem="fgJ-s6-uja" secondAttribute="leading" constant="18" id="dat-SA-wet"/>
                                                     <constraint firstItem="uPJ-O1-DPH" firstAttribute="leading" secondItem="fgJ-s6-uja" secondAttribute="leading" constant="18" id="ftF-bO-HNt"/>
                                                     <constraint firstItem="ME1-DH-gBi" firstAttribute="top" secondItem="fgJ-s6-uja" secondAttribute="top" constant="24" id="kQk-ve-v8j"/>
+                                                    <constraint firstAttribute="bottom" secondItem="uPJ-O1-DPH" secondAttribute="bottom" constant="20" id="nLO-C8-21L"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -138,7 +162,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc3-ZD-pzH">
-                                                <rect key="frame" x="20" y="574" width="374" height="84"/>
+                                                <rect key="frame" x="20" y="603.5" width="374" height="84"/>
                                                 <string key="text">On the web Dashboard, navigate to the Crashes product in the left navigation bar and find your crash. It will be mixed with others' crashes.</string>
                                                 <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
                                                 <color key="textColor" name="shake_subtitle_color"/>
@@ -152,11 +176,11 @@
                                             <constraint firstItem="CPo-Nc-CXe" firstAttribute="top" secondItem="b8w-jc-Kxi" secondAttribute="top" constant="30" id="3XG-5R-Vg1"/>
                                             <constraint firstAttribute="trailing" secondItem="Zc3-ZD-pzH" secondAttribute="trailing" constant="20" id="5Lx-Gm-2KB"/>
                                             <constraint firstItem="Zc3-ZD-pzH" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="938-Xx-0Ph"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Zc3-ZD-pzH" secondAttribute="bottom" constant="60" id="BKi-Jv-BDq"/>
                                             <constraint firstItem="HQS-wJ-mv2" firstAttribute="top" secondItem="gR8-SC-rQl" secondAttribute="bottom" constant="60" id="Dbp-St-HeA"/>
                                             <constraint firstItem="Zc3-ZD-pzH" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="EO0-d2-NQD"/>
                                             <constraint firstItem="fgJ-s6-uja" firstAttribute="top" secondItem="HQS-wJ-mv2" secondAttribute="bottom" constant="18" id="EuB-SP-baE"/>
                                             <constraint firstAttribute="trailing" secondItem="gR8-SC-rQl" secondAttribute="trailing" constant="20" id="FBG-Tq-5zq"/>
-                                            <constraint firstAttribute="bottom" secondItem="Zc3-ZD-pzH" secondAttribute="bottom" constant="40" id="GlY-rU-WpW"/>
                                             <constraint firstItem="Zc3-ZD-pzH" firstAttribute="top" secondItem="fgJ-s6-uja" secondAttribute="bottom" constant="60" id="JBL-Af-9XU"/>
                                             <constraint firstItem="Zc3-ZD-pzH" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="N9A-UB-s00"/>
                                             <constraint firstItem="gR8-SC-rQl" firstAttribute="leading" secondItem="b8w-jc-Kxi" secondAttribute="leading" constant="20" id="V41-z8-JDY"/>
@@ -190,6 +214,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="stepsTextView" destination="haH-d7-yRF" id="vZu-hv-fUc"/>
                         <outlet property="tutorialStepCrash" destination="ME1-DH-gBi" id="Zua-ZB-BTg"/>
                     </connections>
                 </viewController>
@@ -205,10 +230,10 @@
             <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="shake_steps_color">
-            <color red="0.44280344785625619" green="0.44596069656810028" blue="0.45543244270363237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.44299998879432678" green="0.44600000977516174" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="shake_steps_parent_view">
-            <color red="0.95700103039999995" green="0.95650047059999999" blue="0.97255247830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="shake_subtitle_color">
             <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
