@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roobert-Medium.otf">
+            <string>Roobert-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--ShakingVC-->
+        <scene sceneID="w0Y-Yi-gyX">
+            <objects>
+                <viewController storyboardIdentifier="ShakingVC" id="amK-pj-P3e" userLabel="ShakingVC" customClass="ShakingVC" customModule="shake_demo_ios" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="crs-cj-XdA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpl-0X-OPN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7X-wv-Flp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="905.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Ticket App" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gs-s8-We3">
+                                                <rect key="frame" x="20" y="30" width="374" height="84"/>
+                                                <fontDescription key="fontDescription" name="Roobert-Bold" family="Roobert" pointSize="36"/>
+                                                <color key="textColor" name="shake_headline_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eb7-wp-oGL">
+                                                <rect key="frame" x="20" y="149" width="374" height="145"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" link="YES"/>
+                                                </accessibility>
+                                                <string key="text">To learn about Shake SDK, visit www.shakebugs.com
+
+This application is a playground where you can try what Shake SDK can do, without having to add it to your app.</string>
+                                                <color key="textColor" name="shake_subtitle_color"/>
+                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="url"/>
+                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="t7X-wv-Flp" id="xTk-uA-vPV"/>
+                                                </connections>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now try this ✨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nk3-Ja-CEA">
+                                                <rect key="frame" x="20" y="354" width="374" height="26"/>
+                                                <fontDescription key="fontDescription" name="Roobert-Bold" family="Roobert" pointSize="22"/>
+                                                <color key="textColor" name="shake_headline_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-E4-0Iz" userLabel="StepsView">
+                                                <rect key="frame" x="20" y="398" width="374" height="239.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9I-dG-vhG" userLabel="View1">
+                                                        <rect key="frame" x="18" y="24" width="338" height="42"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="do7-Ve-Cjv" customClass="CircleView" customModule="shake_demo_ios" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="-1.5" width="45" height="45"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shaking-one" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-vs-cyH">
+                                                                        <rect key="frame" x="9" y="9" width="27" height="27"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.29803921568627451" green="0.82352941176470584" blue="0.40000000000000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="bRA-z2-GAO"/>
+                                                                    <constraint firstItem="mX8-vs-cyH" firstAttribute="centerY" secondItem="do7-Ve-Cjv" secondAttribute="centerY" id="djK-Dk-2MG"/>
+                                                                    <constraint firstItem="mX8-vs-cyH" firstAttribute="centerX" secondItem="do7-Ve-Cjv" secondAttribute="centerX" id="mVy-j8-qhg"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="uby-mo-odj"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake your phone → write anything and tap Submit" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSS-tN-Lto" userLabel="label">
+                                                                <rect key="frame" x="63" y="0.0" width="257" height="42"/>
+                                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
+                                                                <color key="textColor" name="shake_steps_color"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="do7-Ve-Cjv" firstAttribute="leading" secondItem="j9I-dG-vhG" secondAttribute="leading" id="6Ux-ih-yVA"/>
+                                                            <constraint firstAttribute="bottom" secondItem="gSS-tN-Lto" secondAttribute="bottom" id="7Ok-Ub-2KT"/>
+                                                            <constraint firstItem="gSS-tN-Lto" firstAttribute="leading" secondItem="do7-Ve-Cjv" secondAttribute="trailing" constant="18" id="kll-lt-2m9"/>
+                                                            <constraint firstItem="do7-Ve-Cjv" firstAttribute="centerY" secondItem="j9I-dG-vhG" secondAttribute="centerY" id="l5c-tt-IEc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="gSS-tN-Lto" secondAttribute="trailing" constant="18" id="nXx-l3-miI"/>
+                                                            <constraint firstItem="gSS-tN-Lto" firstAttribute="top" secondItem="j9I-dG-vhG" secondAttribute="top" id="tJR-9U-Qcu"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wj6-t5-IGl" userLabel="View2">
+                                                        <rect key="frame" x="18" y="98" width="338" height="123.5"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWd-Eo-wUF" customClass="CircleView" customModule="shake_demo_ios" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="39.5" width="45" height="45"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shaking-two" translatesAutoresizingMaskIntoConstraints="NO" id="zTg-Pe-XP0">
+                                                                        <rect key="frame" x="9" y="9" width="27" height="27"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.29803921568627451" green="0.82352941176470584" blue="0.40000000000000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="zTg-Pe-XP0" firstAttribute="centerY" secondItem="vWd-Eo-wUF" secondAttribute="centerY" id="ZUF-1y-IvH"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="bhd-Mz-2l4"/>
+                                                                    <constraint firstItem="zTg-Pe-XP0" firstAttribute="centerX" secondItem="vWd-Eo-wUF" secondAttribute="centerX" id="dIM-Fi-dqF"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="k2v-Jx-pr5"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbR-2r-hZq" userLabel="textView">
+                                                                <rect key="frame" x="63" y="0.0" width="257" height="123.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <string key="text">On your computer visit www.shk.sh/demo to see how your submitted ticket looks like. Shake SDK has attached all that data automatically!</string>
+                                                                <color key="textColor" name="shake_steps_color"/>
+                                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="gbR-2r-hZq" secondAttribute="trailing" constant="18" id="Pa8-c1-XvG"/>
+                                                            <constraint firstItem="vWd-Eo-wUF" firstAttribute="centerY" secondItem="wj6-t5-IGl" secondAttribute="centerY" id="Qrr-w0-GAI"/>
+                                                            <constraint firstItem="gbR-2r-hZq" firstAttribute="top" secondItem="wj6-t5-IGl" secondAttribute="top" id="Zfe-xf-FVi"/>
+                                                            <constraint firstAttribute="bottom" secondItem="gbR-2r-hZq" secondAttribute="bottom" id="jg8-5h-GZb"/>
+                                                            <constraint firstItem="gbR-2r-hZq" firstAttribute="leading" secondItem="vWd-Eo-wUF" secondAttribute="trailing" constant="18" id="jlQ-I4-0qv"/>
+                                                            <constraint firstItem="vWd-Eo-wUF" firstAttribute="leading" secondItem="wj6-t5-IGl" secondAttribute="leading" id="q2s-R6-TJs"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" name="shake_steps_parent_view"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="j9I-dG-vhG" secondAttribute="trailing" constant="18" id="84U-fv-Xhs"/>
+                                                    <constraint firstItem="j9I-dG-vhG" firstAttribute="leading" secondItem="ofc-E4-0Iz" secondAttribute="leading" constant="18" id="BGt-M6-AqI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wj6-t5-IGl" secondAttribute="bottom" constant="18" id="BLU-cQ-hcc"/>
+                                                    <constraint firstItem="wj6-t5-IGl" firstAttribute="leading" secondItem="ofc-E4-0Iz" secondAttribute="leading" constant="18" id="dln-Ay-bLY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wj6-t5-IGl" secondAttribute="trailing" constant="18" id="mXf-HB-WcB"/>
+                                                    <constraint firstItem="wj6-t5-IGl" firstAttribute="top" secondItem="j9I-dG-vhG" secondAttribute="bottom" constant="32" id="mjt-8D-LFz"/>
+                                                    <constraint firstItem="j9I-dG-vhG" firstAttribute="top" secondItem="ofc-E4-0Iz" secondAttribute="top" constant="24" id="uS7-ZE-SY4"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ah5-oe-Wob">
+                                                <rect key="frame" x="20" y="697.5" width="374" height="168"/>
+                                                <string key="text">Add Shake SDK to your internal app build and distribute it to your team, or a client. Whenever they notice a bug → they can just shake the phone to report a perfect bug in a few seconds &amp; without leaving your app.
+
+For more ideas, visit the  navbar ☰ in the top left corner.</string>
+                                                <fontDescription key="fontDescription" name="Roobert-Medium" family="Roobert" pointSize="18"/>
+                                                <color key="textColor" name="shake_subtitle_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Ah5-oe-Wob" firstAttribute="leading" secondItem="t7X-wv-Flp" secondAttribute="leading" constant="20" id="2Zx-Yd-n27"/>
+                                            <constraint firstAttribute="trailing" secondItem="eb7-wp-oGL" secondAttribute="trailing" constant="20" id="Egq-pc-481"/>
+                                            <constraint firstItem="Ah5-oe-Wob" firstAttribute="leading" secondItem="t7X-wv-Flp" secondAttribute="leading" constant="20" id="ElL-7i-I2c"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ah5-oe-Wob" secondAttribute="bottom" constant="40" id="GuT-0f-dLi"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ah5-oe-Wob" secondAttribute="trailing" constant="20" id="J3c-sC-sYH"/>
+                                            <constraint firstItem="nk3-Ja-CEA" firstAttribute="leading" secondItem="t7X-wv-Flp" secondAttribute="leading" constant="20" id="KQy-06-27i"/>
+                                            <constraint firstAttribute="trailing" secondItem="nk3-Ja-CEA" secondAttribute="trailing" constant="20" id="Kss-Eh-mPF"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ah5-oe-Wob" secondAttribute="trailing" constant="20" id="OUb-5D-aQB"/>
+                                            <constraint firstItem="eb7-wp-oGL" firstAttribute="leading" secondItem="t7X-wv-Flp" secondAttribute="leading" constant="20" id="PwD-5R-cL1"/>
+                                            <constraint firstAttribute="trailing" secondItem="ofc-E4-0Iz" secondAttribute="trailing" constant="20" id="Q1y-ms-xqk"/>
+                                            <constraint firstItem="ofc-E4-0Iz" firstAttribute="leading" secondItem="t7X-wv-Flp" secondAttribute="leading" constant="20" id="UUH-Oe-h80"/>
+                                            <constraint firstItem="nk3-Ja-CEA" firstAttribute="top" secondItem="eb7-wp-oGL" secondAttribute="bottom" constant="60" id="X30-a9-Xqv"/>
+                                            <constraint firstItem="Ah5-oe-Wob" firstAttribute="leading" secondItem="t7X-wv-Flp" secondAttribute="leading" constant="20" id="afs-Ys-vKL"/>
+                                            <constraint firstItem="ofc-E4-0Iz" firstAttribute="top" secondItem="nk3-Ja-CEA" secondAttribute="bottom" constant="18" id="bkY-4W-2ys"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ah5-oe-Wob" secondAttribute="trailing" constant="20" id="dJd-Vi-5dh"/>
+                                            <constraint firstItem="eb7-wp-oGL" firstAttribute="top" secondItem="4gs-s8-We3" secondAttribute="bottom" constant="35" id="fC9-KS-2Wx"/>
+                                            <constraint firstItem="4gs-s8-We3" firstAttribute="top" secondItem="t7X-wv-Flp" secondAttribute="top" constant="30" id="fex-1Q-YCQ"/>
+                                            <constraint firstItem="4gs-s8-We3" firstAttribute="leading" secondItem="t7X-wv-Flp" secondAttribute="leading" constant="20" id="jXd-at-mav"/>
+                                            <constraint firstAttribute="trailing" secondItem="4gs-s8-We3" secondAttribute="trailing" constant="20" id="m0z-4H-8aa"/>
+                                            <constraint firstItem="Ah5-oe-Wob" firstAttribute="top" secondItem="ofc-E4-0Iz" secondAttribute="bottom" constant="60" id="zxy-40-MOz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="t7X-wv-Flp" firstAttribute="leading" secondItem="xpl-0X-OPN" secondAttribute="leading" id="37L-gM-LOD"/>
+                                    <constraint firstItem="t7X-wv-Flp" firstAttribute="top" secondItem="xpl-0X-OPN" secondAttribute="top" id="9QW-Da-7B5"/>
+                                    <constraint firstAttribute="bottom" secondItem="t7X-wv-Flp" secondAttribute="bottom" id="W3S-QF-aQb"/>
+                                    <constraint firstAttribute="trailing" secondItem="t7X-wv-Flp" secondAttribute="trailing" id="jkb-h6-IfA"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5ae-q1-NmY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xpl-0X-OPN" firstAttribute="trailing" secondItem="5ae-q1-NmY" secondAttribute="trailing" id="5gY-z3-E6c"/>
+                            <constraint firstItem="t7X-wv-Flp" firstAttribute="width" secondItem="5ae-q1-NmY" secondAttribute="width" id="Sph-uk-RM2"/>
+                            <constraint firstItem="xpl-0X-OPN" firstAttribute="bottom" secondItem="5ae-q1-NmY" secondAttribute="bottom" id="Zlq-u3-fn4"/>
+                            <constraint firstItem="xpl-0X-OPN" firstAttribute="top" secondItem="5ae-q1-NmY" secondAttribute="top" id="l6j-id-kBL"/>
+                            <constraint firstItem="t7X-wv-Flp" firstAttribute="height" secondItem="5ae-q1-NmY" secondAttribute="height" priority="250" id="nWt-Nv-UmR"/>
+                            <constraint firstItem="xpl-0X-OPN" firstAttribute="leading" secondItem="5ae-q1-NmY" secondAttribute="leading" id="sm6-eB-tyU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stepsTextView" destination="gbR-2r-hZq" id="haa-c3-otb"/>
+                        <outlet property="textView" destination="eb7-wp-oGL" id="Nrz-y4-90D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0U-Gf-v5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910.14492753623199" y="41.517857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="shaking-one" width="27" height="27"/>
+        <image name="shaking-two" width="27" height="27"/>
+        <namedColor name="shake_headline_color">
+            <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11800000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="shake_steps_color">
+            <color red="0.44299998879432678" green="0.44600000977516174" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="shake_steps_parent_view">
+            <color red="0.9570000171661377" green="0.9570000171661377" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="shake_subtitle_color">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
