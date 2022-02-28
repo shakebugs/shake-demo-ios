@@ -57,4 +57,4 @@ This app is intended as a playground for what Shake can do, without having to ad
 
 ## Authors
 
-- Sanjin Grahovar SadikoviÄ‡ - [sgrahovar-shake](https://github.com/orgs/shakebugs/people/sgrahovar-shake)
+- Sanjin Grahovar Sadikovic - [sgrahovar-shake](https://github.com/orgs/shakebugs/people/sgrahovar-shake)
